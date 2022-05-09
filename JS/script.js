@@ -34,7 +34,8 @@ function validateLetter() {
 		getLetterInput.value = "";
 	} else {
 		getLetterInput.value = "";
-		err.innerHTML = "<b style='color:blue'>" + checkLetterInput + "</b> is not a letter.<br>Only letters are allowed! ";
+		err.innerHTML = "<b style='color:blue'>" + checkLetterInput 
+		+ "</b> is not a letter.<br>Only letters are allowed! ";
 	}
 }
 
@@ -43,8 +44,7 @@ function displayAndUpdateWord(letter) {
 	let tmp2 = "";
 	countCorrectLetters = 0;
 	for (let i = 0; i < wordLength; ++i) {
-		if (correctWord[0] == correctWord[i] 
-			|| letter === correctWord[i] 
+		if (correctWord[0] == correctWord[i] || letter === correctWord[i] 
 			|| remainedLetters[i * 2] == '_') {
 			tmp += correctWord[i] + ' ';
 			tmp2 += "_ ";
