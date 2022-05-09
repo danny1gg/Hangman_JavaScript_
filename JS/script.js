@@ -3,7 +3,7 @@ var correctWord = array_words[randomWord];
 var wordLength = correctWord.length;
 var image = document.getElementsByTagName("img");
 var displayCorrectWord = document.getElementById("displayCorrectWord");
-var letterInput = document.getElementById("letterInput");
+var getLetterInput = document.getElementById("letterInput");
 var displayEnteredLetters = document.getElementById("displayEnteredLetters");
 var err = document.getElementById("error");
 var enteredLetters = "";
@@ -19,7 +19,7 @@ function isLetter(letter) {
 }
 
 function validateLetter() {
-	var checkLetterInput = letterInput.value.toLowerCase();;
+	var checkLetterInput = getLetterInput.value.toLowerCase();;
 	if (isLetter(checkLetterInput)) {
 		err.innerHTML = ""
 		if (enteredLetters.indexOf(checkLetterInput) === -1) {
@@ -31,9 +31,9 @@ function validateLetter() {
 		} else {
 			err.innerHTML = "Letter <b style='color:blue'>" + checkLetterInput + "</b> already tried!";
 		}
-		letterInput.value = "";
+		getLetterInput.value = "";
 	} else {
-		letterInput.value = "";
+		getLetterInput.value = "";
 		err.innerHTML = "<b style='color:blue'>" + checkLetterInput + "</b> is not a letter.<br>Only letters are allowed! ";
 	}
 }
