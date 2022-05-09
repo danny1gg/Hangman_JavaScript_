@@ -6,4 +6,4 @@ Just try to guess the word by typing the right letters in the input box.
 
 Have fun!
 
-![](hangman_screenshot.jpg)
+![](JS/hangman_screenshot.jpg)
